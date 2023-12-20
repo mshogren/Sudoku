@@ -1,0 +1,31 @@
+{
+   "tasks": [
+      {
+         "name": "Run JB Inspect Code",
+         "command": "cmd",
+         "pathMode": "relative",
+         "args": [
+           "/c",
+           "dotnet",
+           "jb",
+           "inspectcode",
+           "Sudoku.sln",
+           "-o=\"report.xml\""
+         ],
+         "group": "pre-commit"
+      },
+      {
+         "name": "Run JetBrains Clean Up Code",
+         "command": "cmd",
+         "pathMode": "relative",
+         "args": [
+           "/c",
+           "dotnet",
+           "jb",
+           "cleanupcode",
+           "Sudoku.sln"
+         ],
+         "group": "pre-commit"
+      }
+   ]
+}
